@@ -9,6 +9,6 @@ int main(int argc, const char** argv)
             return 1;
         }
     Params params = interface.getParams();
-    Connection::conn(&params);//&params
+    Connection::conn(&params);
     return 0;
 }
