@@ -151,8 +151,6 @@ SUITE(EdgeCasesTest) {
         UserInterface iface;
         const char* argv[] = {"test", nullptr};
         int argc = sizeof(argv) / sizeof(argv[0]) - 1;
-        // Вместо исключения, парсер может вернуть false или бросить другое исключение
-        // Проверяем что парсинг не завершается успешно
         CHECK(!iface.Parser(argc, argv));
     }
 
@@ -175,7 +173,7 @@ SUITE(EdgeCasesTest) {
         const char* argv[] = {"test", "-b", "db1", "-j", "log", "-p", "9090", nullptr};
         int argc = sizeof(argv) / sizeof(argv[0]) - 1;
         CHECK(iface.Parser(argc, argv));
-        // Проверяем, что используется первое значение (не допускаем дублирование)
+        
         CHECK_EQUAL("db1", iface.getParams().inFileName);
     }
 
@@ -193,7 +191,7 @@ SUITE(EdgeCasesTest) {
         UserInterface iface;
         const char* argv[] = {"test", "-b", "db", "-h", "-j", "log", nullptr};
         int argc = sizeof(argv) / sizeof(argv[0]) - 1;
-        // Help должен иметь приоритет и парсинг должен вернуть false
+      
         CHECK(!iface.Parser(argc, argv));
     }
 }
