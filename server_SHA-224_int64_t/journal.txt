@@ -9,3 +9,11 @@
 [2025-10-27 11:53:40.533] ERROR: Ошибка recv (количество векторов): Success
 [2025-11-05 10:26:35.173] ERROR: Ошибка bind: Address already in use
 [2025-11-05 10:26:43.851] ERROR: Ошибка bind: Address already in use
+[2025-11-24 06:58:14.120] ERROR: Неверный формат сообщения от клиента
+[2025-11-24 06:58:27.137] ERROR: Ошибка bind: Address already in use
+[2025-11-24 06:58:34.825] ERROR: Ошибка bind: Address already in use
+[2025-11-24 06:58:41.377] ERROR: Ошибка bind: Address already in use
+[2025-11-24 06:58:47.511] ERROR: Ошибка bind: Address already in use
+[2025-11-24 06:58:53.385] ERROR: Ошибка bind: Address already in use
+[2025-11-24 06:59:00.142] ERROR: Ошибка bind: Address already in use
+[2025-11-24 06:59:09.339] ERROR: Ошибка bind: Address already in use

@@ -1,6 +1,18 @@
+/**
+ * @file interface.cpp
+ * @author Мезин А.А.
+ * @version 1.0
+ * @date 2025
+ * @copyright ИБСТ ПГУ
+ * @brief Реализация пользовательского интерфейса
+ * @warning Учебный пример
+ */
+
 #include "interface.h"
 
-
+/**
+ * @brief Конструктор инициализирует параметры командной строки
+ */
 UserInterface::UserInterface() : desc("Allowed options")
 {
     // добавление параметров в парсер командной строки
@@ -14,7 +26,13 @@ UserInterface::UserInterface() : desc("Allowed options")
 
 }
 
-
+/**
+ * @brief Парсинг аргументов командной строки
+ * @param[in] argc Количество аргументов
+ * @param[in] argv Массив аргументов
+ * @return true при успешном парсинге, false при запросе помощи
+ * @throw boost::program_options::error при некорректных аргументах
+ */
 bool UserInterface::Parser(int argc, const char** argv)
 {
     // Если нет аргументов или только --help, показываем справку
@@ -31,7 +49,10 @@ bool UserInterface::Parser(int argc, const char** argv)
     return true;
 }
 
-
+/**
+ * @brief Генерация строки с описанием параметров
+ * @return Форматированная строка с описанием всех опций
+ */
 std::string UserInterface::getDescription()
 {
     std::ostringstream ss;

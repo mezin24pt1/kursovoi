@@ -1,5 +1,19 @@
+/**
+ * @file log.cpp
+ * @author Мезин А.А.
+ * @version 1.0
+ * @date 2025
+ * @copyright ИБСТ ПГУ
+ * @brief Реализация функций логирования
+ * @warning Учебный пример
+ */
+
 #include "log.h"
 
+/**
+ * @brief Получение текущего времени с миллисекундами
+ * @return Строка в формате "ГГГГ-ММ-ДД ЧЧ:ММ:СС.ммм"
+ */
 std::string getCurrentTime() {
     auto now = std::chrono::system_clock::now();
     auto time_t = std::chrono::system_clock::to_time_t(now);
@@ -12,7 +26,12 @@ std::string getCurrentTime() {
     return ss.str();
 }
 
-// Функция для записи ошибки в лог-файл
+/**
+ * @brief Запись ошибки в лог с временной меткой
+ * @param[in] logFile Путь к файлу лога
+ * @param[in] errorMessage Текст ошибки для записи
+ */
+
 void logError(const std::string& logFile, const std::string& errorMessage) {
     std::ofstream logStream(logFile, std::ios::app);
     if (logStream.is_open()) {
