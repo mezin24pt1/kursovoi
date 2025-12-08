@@ -151,7 +151,11 @@ SUITE(EdgeCasesTest) {
         UserInterface iface;
         const char* argv[] = {"test", nullptr};
         int argc = sizeof(argv) / sizeof(argv[0]) - 1;
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> b0a42c53e0c6f9bbb5e1fd40ec2e9e8e90c55408
         CHECK(!iface.Parser(argc, argv));
     }
 
@@ -174,7 +178,11 @@ SUITE(EdgeCasesTest) {
         const char* argv[] = {"test", "-b", "db1", "-j", "log", "-p", "9090", nullptr};
         int argc = sizeof(argv) / sizeof(argv[0]) - 1;
         CHECK(iface.Parser(argc, argv));
+<<<<<<< HEAD
         
+=======
+       
+>>>>>>> b0a42c53e0c6f9bbb5e1fd40ec2e9e8e90c55408
         CHECK_EQUAL("db1", iface.getParams().inFileName);
     }
 
@@ -192,7 +200,11 @@ SUITE(EdgeCasesTest) {
         UserInterface iface;
         const char* argv[] = {"test", "-b", "db", "-h", "-j", "log", nullptr};
         int argc = sizeof(argv) / sizeof(argv[0]) - 1;
+<<<<<<< HEAD
         
+=======
+       
+>>>>>>> b0a42c53e0c6f9bbb5e1fd40ec2e9e8e90c55408
         CHECK(!iface.Parser(argc, argv));
     }
 }
